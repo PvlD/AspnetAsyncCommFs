@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="RequestSvc.Server.fsproj.user" />
+    <Compile Include="Core\Config\MassTransitConfig.fs" />
+    <Compile Include="Core\Config\AppConfig.fs" />
+    <Compile Include="ProductsSetvice.fs" />
+    <Compile Include="Startup.fs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\HildenCo.Core\HildenCo.Core.fsproj" />
+    <ProjectReference Include="..\RequestSvc.Client\RequestSvc.Client.fsproj" />
+    <PackageReference Include="Bolero.Server" Version="0.*" />
+    <PackageReference Include="Bolero.HotReload.Server" Version="0.*" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.1.8" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.1" />
+  </ItemGroup>
+</Project>

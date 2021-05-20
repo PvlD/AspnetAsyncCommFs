@@ -1,0 +1,83 @@
+<div class="columns">
+  <aside class="column sidebar is-narrow">
+    <section class="section">
+      <nav class="menu">
+        <ul class="menu-list">
+          ${Menu}
+          <template id="MenuItem">
+            <li><a class="${Active}" href="${Url}">${Text}</a></li>
+          </template>
+        </ul>
+      </nav>
+    </section>
+  </aside>
+  <div class="column">
+    <section class="section">
+      ${Body}
+
+      <div id="notification-area">
+        <div>${Error}</div>
+      </div>
+
+      <template id="Home">
+            
+              <div class="columns">
+                  <div class="column ">
+                      <div class="columns">
+                          
+                          <div class="column ">
+                              <form onsubmit="${Submit}">
+                                  <div class="box">
+                                      <h3 class="title">Request:</h3>
+                                      <div class="field">
+                                          <label class="label">Product Slug:</label>
+                                          <div class="control">
+                                              <input class="input" bind="${ProductSlug}" type="text" placeholder="eg. g-ps4">
+                                          </div>
+                                      </div>
+                                      <div class="field">
+                                          <label class="label">Fake Timeout:</label>
+                                          <div class="select is-info">
+                                              <select bind="${FakeTimeout}">
+                                                  <option value="1">1s</option>
+                                                  <option value="2">2s</option>
+                                                  <option value="3">3s</option>
+                                                  <option value="4">4s</option>
+                                                  <option value="5">5s</option>
+                                              </select>
+                                          </div>
+
+                                      </div>
+                                      <div class="field">
+                                          <div class="control">
+                                              <input class="button is-primary" type="submit" value="Submit" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  ${ErrorNotification}
+                              </form>
+
+
+                          </div>
+                              <div class="column ">
+                                  <div class="box" style="height:100%" >
+                                      <h3 class="title">Response:</h3>
+                                      ${ProductData}
+                                      ${ErrorNotificationRespoce}
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+      </template>
+
+      <template id="ErrorNotification">
+        <div class="notification is-warning">
+          <button class="delete ${HideClass}" onclick="${Hide}"></button>
+          ${Text}
+        </div>
+      </template>
+
+    </section>
+  </div>
+</div>
