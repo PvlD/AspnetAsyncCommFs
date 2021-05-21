@@ -103,10 +103,10 @@ let update (js: IJSRuntime)  (remoteProducts:ProductsSetvice)  message model =
         
     | Error (RemoteException ex) ->
         
-        { model with error = Some ("RemoteException: " + ex.ToString() + "\n Content:"  + ex.Content.ReadAsStringAsync().Result  ) ; }, Cmd.none
+        { model with productData  = "";  error = Some ("RemoteException: " + ex.ToString() + "\n Content:"  + ex.Content.ReadAsStringAsync().Result  ) ; }, Cmd.none
 
     | Error exn ->
-        { model with error = Some exn.Message }, Cmd.none
+        { model with productData  = ""; error = Some exn.Message }, Cmd.none
     | ClearError ->
         { model with error = None }, Cmd.none
 
