@@ -16,7 +16,6 @@ open HildenCo.Core.Contracts
 open Microsoft.Extensions.DependencyInjection
 
 type ProductsSetvice(ctx: IRemoteContext, env: IWebHostEnvironment )=
-        //,  client:IRequestClient<ProductInfoRequest> ) =
     inherit RemoteHandler<Client.Main.ProductsSetvice>()
 
     override this.Handler =

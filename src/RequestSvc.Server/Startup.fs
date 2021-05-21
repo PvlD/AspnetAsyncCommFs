@@ -41,7 +41,7 @@ type Startup(configuration:IConfiguration ) =
 
         services.AddMassTransitHostedService() |> ignore
 
-        //services.AddMvc() |> ignore
+        
         services.AddServerSideBlazor() |> ignore
         services
             .AddAuthorization()
@@ -76,7 +76,7 @@ type Startup(configuration:IConfiguration ) =
 #if DEBUG
                 endpoints.UseHotReload()
 #endif
-                //endpoints.MapControllers() |> ignore
+                
                 endpoints.MapFallbackToFile("index.html") |> ignore)
         |> ignore
 
