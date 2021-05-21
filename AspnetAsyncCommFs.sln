@@ -15,6 +15,13 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ResponseSvc.Client", "src\R
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ResponseSvc.Server", "src\ResponseSvc.Server\ResponseSvc.Server.fsproj", "{A008DAD2-63FE-4599-BF5E-F9ED246115C6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F07FC268-468E-4111-B335-193FC14CD37E}"
+	ProjectSection(SolutionItems) = preProject
+		images\i1.png = images\i1.png
+		images\i2.png = images\i2.png
+		images\i3.png = images\i3.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
